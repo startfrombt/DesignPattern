@@ -2,6 +2,9 @@ package designPattern;
 
 import java.util.Objects;
 
+import lombok.Getter;
+
+@Getter
 //Effective Java의 Builder Pattern
 public class BuilderPattern {
 	private final String id;
@@ -16,23 +19,6 @@ public class BuilderPattern {
         this.age = builder.age;
         this.email = builder.email;
     }
-    
-    public String getId() {
-		return id;
-	}
-
-	public String getPwd() {
-		return pwd;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
 
 	public static class Builder {
         // Required parameters(필수 인자)
